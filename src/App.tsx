@@ -2,18 +2,17 @@ import React from 'react';
 // @ts-ignore
 import {BrowserRouter as Router, Route} from "react-router-dom";
 
-// @ts-ignore
-import Dashboard from './ts/dashboard'
-import MainPage from './ts/mainpage'
+import Dashboard from './ts/dashboard';
+import MainPage from './ts/mainpage';
+import Arrange from "./ts/arrange";
 
 function App() {
     return (
         <Router>
             <Route path="/" exact component={MainPage}/>
-            <Route path="/Dashboard" component={Dashboard}/>
+            <Route path="/Dashboard" exact component={Dashboard}/>
+            <Route path="/Dashboard/arrange" component={Arrange}/>
         </Router>
-
-
     );
 }
 
