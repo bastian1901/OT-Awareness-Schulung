@@ -10,6 +10,7 @@ import { Button, Group, Modal } from "@mantine/core";
 
 // import Backend to get the data from the database
 import storage from '../storage';
+import {useHotkeys} from "@mantine/hooks";
 
 export const ModiContext = createContext({});
 
@@ -21,6 +22,9 @@ const Gamemodi = () => {
     const [firstRender, setFirstRender] = useState(true)
     const [reload, setReload] = useState(true)
     const [modis] = useState(storage.getModis())
+    useHotkeys([
+        ['ctrl+y', () => navigator("./Endscreen")]
+    ]);
 
 
     useEffect(() => {
