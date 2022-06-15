@@ -23,7 +23,9 @@ const Gamemodi = () => {
     const [reload, setReload] = useState(true)
     const [modis] = useState(storage.getModis())
     useHotkeys([
-        ['ctrl+y', () => navigator("./Endscreen")]
+        ['ctrl+y', () => navigator("./Endscreen")],
+        ['ctrl+x', () => markAsPassed()]
+
     ]);
 
 
