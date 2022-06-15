@@ -96,13 +96,13 @@ const Zuordnung = () => {
             }
 
             Data.map((object, idx) => {
-
                 let frage = {
                     id: idx + 1,
                     frage: object.frage,
                 };
                 fragen.push(frage);
                 object.antworten.map((a, idx) => {
+                        if(idx<2){
                     let antwort = {
                         id: ((idx) + 10 * (frage.id)),
                         text: a.text,
@@ -110,6 +110,7 @@ const Zuordnung = () => {
                         right: false
                     };
                     antworten.push(antwort)
+                        }
                 });
             });
             setAntworten(shuffle(antworten))

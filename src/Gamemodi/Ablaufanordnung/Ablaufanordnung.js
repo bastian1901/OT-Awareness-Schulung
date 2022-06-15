@@ -111,6 +111,7 @@ const Ablaufanordnung = () => {
             }
 
             Data.map((object, idx) => {
+                if(idx <4){
                     let card = {
                         key: Math.random(),
                         id: idx + 1,
@@ -125,6 +126,7 @@ const Ablaufanordnung = () => {
                     };
                     boxes.push(box);
             }
+                }
             )
             setCards(shuffle(cards));
         }
