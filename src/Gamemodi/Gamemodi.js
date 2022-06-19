@@ -101,7 +101,7 @@ const Gamemodi = () => {
 
             {/* progress indicator */}
             <div className="section-header">
-                <h3 className="title" data-title={"Badge " + badgeNr}>{currentModiTitle}</h3>
+                <h3 className="title" data-title={"Batch " + badgeNr}>{currentModiTitle === 'Multiplechoice' ? 'Multiple-Choice' : currentModiTitle}</h3>
                 <br />
                 <Fortschrittsanzeige modis={modis} />
                 <br />
