@@ -11,10 +11,8 @@ const NavBar = (props: { children: any; }) => {
             <div className="container">
                 <div className="logo">
                     <Link to={'../Startseite'}>
-                        <img
+                        <div
                             className="icon"
-                            src={erlenmeyer}
-                            alt="icon"
                         />
                     </Link>
                 </div>
