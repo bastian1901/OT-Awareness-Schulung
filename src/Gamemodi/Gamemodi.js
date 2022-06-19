@@ -91,7 +91,7 @@ const Gamemodi = () => {
                     <Button onClick={() => {
                         modis.map(modi => modi.passed = false)
                         storage.removeAll()
-                        navigator('../Badges')
+                        navigator('../Batches')
                         setModalOpened(false)
                     }}>Ja</Button>
                     <Button onClick={() => setModalOpened(false)}>Nein</Button>
